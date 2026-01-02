@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
+	
 	// // Print a 4 × 5 grid of *
 	// for a := 1; a <= 4; a++ {
 	// 	for b := 1; b <= 5; b++ {
@@ -31,12 +32,14 @@ func main() {
 
 	// // Print a pyramid of height 4
 	// for row := 1; row < 5; row++ {
+	// // create the empty space to be inverted
 	// 	for space := 1; space <= 5-row; space++ {
 	// 		fmt.Print(" ")
 	// 	}
+	// // create the stars to be right angle triangle (2times)
 	// 	for star := 1; star <= row; star++ {
 	// 			fmt.Print("*")
-	// 		}
+	// 	}
 
 	// 	for star := 1; star < row; star++ {
 	// 		fmt.Print("*")
@@ -56,7 +59,5 @@ func main() {
 		}
 		fmt.Println()
 	}
-
-	
 
 }
