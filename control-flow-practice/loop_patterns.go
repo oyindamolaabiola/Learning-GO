@@ -89,26 +89,26 @@ func main() {
 	fmt.Println("Stopped because you entered zero")
 	fmt.Println("Total average:", average)
 
-		// Sum positives only until 0 — Ignore negatives; stop at 0; print sum.
-		var numbr int
-		var totalPostv int
-		
-		fmt.Println("Enter zero to stop;")
+	// Sum positives only until 0 — Ignore negatives; stop at 0; print sum.
+	var numbr int
+	var totalPostv int
+	
+	fmt.Println("Enter zero to stop;")
+	fmt.Print("Number: ")
+	fmt.Scan(&numbr)
+
+	for numbr != 0 {
+		if numbr > 0 {
+			totalPostv += numbr
+		}
+		fmt.Println("Sum of the positive numbers: ", totalPostv)
+
 		fmt.Print("Number: ")
 		fmt.Scan(&numbr)
+	}
 
-		for numbr != 0 {
-			if numbr > 0 {
-				totalPostv += numbr
-			}
-			fmt.Println("Sum of the positive numbers: ", totalPostv)
-
-			fmt.Print("Number: ")
-			fmt.Scan(&numbr)
-		}
-
-		fmt.Println("Stopped because you entered zero")
-		fmt.Println("Sum of the positives:", totalPostv)
+	fmt.Println("Stopped because you entered zero")
+	fmt.Println("Sum of the positives:", totalPostv)
 
 	// Find max until 0 — Track the largest number; stop when 0 entered. (Prime with first input.)
 	var numm int
