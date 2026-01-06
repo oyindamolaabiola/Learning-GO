@@ -52,23 +52,34 @@ func main () {
 	}
 	fmt.Println("Even number = ", evenNumber)
 
-	// // Reverse the array in place – Show the slice after reversal.
-	// arr4 := []int{1, 2, 3, 4, 5} 
+	// Reverse the array in place – Show the slice after reversal.
+	arr4 := []int{1, 2, 3, 4, 5} 
 
-	// for _, l := range arr4 {
-	// 	arr4[4] = arr4[0]
-	// 	arr4[3] = arr4[1]
-	// }
-	// fmt.Println("Slice = ", arr4)
+	// pointers
+	left := 0 // first item
+	right := len(arr4) - 1 // last item
+
+	for left < right {
+		// swap inwardly
+		arr4[left], arr4[right] = arr4[right], arr4[left] 
+		left++ // moves right
+		right-- // moves left
+	}
+	fmt.Println("Reverse version: ", arr4)
 
 	// Remove all negatives (new slice)
 	arr5 := []int{-3, 5, -1, 0, 8, -2, 7}
-	var negArr5 []int
+	var nonNegArr5 []int
 
 	for _, j := range arr5 {
-		if j < 0 {
-			negArr5 = append(negArr5, j)
+		if j >= 0 {
+			nonNegArr5 = append(nonNegArr5, j)
 		}
 	}
-	fmt.Println("Negative = ", negArr5)
+	fmt.Println("Non-negative = ", nonNegArr5)
+
+	// Check if the array is sorted (ascending) – Return true if sorted, otherwise false.
+	arr6 := []int{1, 2, 3, 5, 4, 6}
+	
+
 }
