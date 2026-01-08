@@ -94,7 +94,7 @@ func main () {
 	fmt.Println(sorted)
 
 	// for-range
-	for ind := range arr6 {
+	for ind := range arr6 { // ignore values, not index
 		if ind == 0 {
 			continue
 		}
@@ -125,7 +125,7 @@ func main () {
 
 	// Deduplicate an array
 	arr8 := []int{4, 2, 4, 6, 2, 8, 6}
-	arrMap := make(map[int]bool)
+	arrMap := make(map[int]bool) // for validation
 	var newArr8 []int
 
 	for _, m := range arr8 {
