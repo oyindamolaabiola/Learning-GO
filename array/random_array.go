@@ -79,26 +79,45 @@ func main () {
 	// fmt.Println("Non-negative = ", nonNegArr5)
 
 	// Check if the array is sorted (ascending) – Return true if sorted, otherwise false.
-	arr6 := []int{1, 2, 3, 5, 4, 6}
+	// arr6 := []int{1, 2, 3, 5, 4, 6}
+	arr6 := []int{10, 20, 15, 30}
+	sorted := true // assume true until proven otherwise
 
-	for _, k := range arr6 {
-		if arr6[0] 
-	}
-	
-	// Find the second‑largest element (invariant)
-	arr7 := []int{12, 7, 19, 3, 19, 5}
-	var maxx int
-	var secMax int
+	// // start from index 1 not zero so that i-1 will be within the range
+	// for i := 1; i < len(arr6); i++ {
+	// 	if arr6[i] < arr6[i-1] {
+	// 		sorted = false
+	// 		break
+	// 	}
+	// }
 
-	for i := 0; i < len(arr7); i++ {
-		if arr7[i] > maxx {
-			secMax = maxx // current maxx is the new secMax
-			maxx = arr7[i] // current large num is the new maxx
-		} else if arr7[i] < maxx && arr7[i] > secMax {
-			secMax = arr7[i]
+	// fmt.Println(sorted)
+
+	for _, j := range arr6 {
+		if arr6[j] < arr6[j-1] {
+			sorted = false
+			break
 		}
 	}
-	fmt.Println("Second Largest: ", secMax)
+
+	fmt.Println(sorted)
+
+	// // Find the second‑largest element (invariant)
+	// arr7 := []int{12, 7, 19, 3, 19, 5}
+
+	// // assume the indices of max and second max
+	// maxx := arr7[0]
+	// secMax := arr7 [1]
+
+	// for i := 0; i < len(arr7); i++ {
+	// 	if arr7[i] > maxx {
+	// 		secMax = maxx
+	// 		maxx = arr7[i]
+	// 	} else if arr7[i] < maxx && arr7[i] > secMax {
+	// 		secMax = arr7[i]
+	// 	}
+	// }
+	// fmt.Println("Second Largest: ", secMax)
 
 	// // Deduplicate an array
 	// arr8 := []int{4, 2, 4, 6, 2, 8, 6}
