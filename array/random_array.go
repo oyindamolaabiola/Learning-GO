@@ -136,4 +136,39 @@ func main () {
 	}
 	fmt.Println("New Array: ", newArr8)
 
+	// Check if a Slice Is Non-Decreasing
+	arr9 := []int{2, 4, 4, 7, 9}
+	// assume the data is non-decreasing (the curr > or = prev)
+	nonDec := true
+
+	for n := 1; n < len(arr9); n++ {
+		if arr9[n] < arr9[n-1] {
+			nonDec = false
+			break
+		}
+	}
+	fmt.Println(nonDec)
+
+	// Check if a Slice Is strictly increasing
+	arr10 := []int{2, 4, 4, 7, 9}
+	// assume the array is strictly increasing (curr > prev)
+	strInc := true
+
+	for o := 1; o < len(arr10); o++ {
+		if arr10[o] <= arr10[o-1] {
+			strInc = false
+			break
+		}
+	}
+	fmt.Println(strInc)
+
+	// // Find the smallest and second smallest number
+	// arr := []int{8, 3, 5, 1, 9, 2}
+
+	// // Find the largest odd number
+	// arr := []int{12, 7, 19, 3, 19, 5}
+
+	// // Find the second largest DISTINCT number
+	// arr := []int{10, 20, 20, 30, 30, 25}
+
 }
