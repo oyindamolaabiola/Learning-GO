@@ -7,13 +7,6 @@ import (
 	"go-cli-tasks/internal/task"
 )
 
-// func main() {
-// 	// if len(os.Args) < 2 {
-// 		fmt.Println("Usage: task [add|list]")
-// 		return
-// 	// }
-// }
-
 func main() {
 	if len(os.Args) < 2 {
 		fmt.Println("Usage: task [add|list|complete]")
