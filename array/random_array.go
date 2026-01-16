@@ -162,13 +162,45 @@ func main () {
 	}
 	fmt.Println(strInc)
 
-	// // Find the smallest and second smallest number
-	// arr := []int{8, 3, 5, 1, 9, 2}
+	// Find the smallest and second smallest number
+	arr11 := []int{8, 3, 5, 1, 9, 2}
 
-	// // Find the largest odd number
-	// arr := []int{12, 7, 19, 3, 19, 5}
+	// assign the smallest to a variable
+	smlst := arr11[0]
+	secSmlst := arr11[1]
+
+	for p := 0; p < len(arr11); p++ {
+		if arr11[p] < smlst {
+			secSmlst = smlst
+			smlst = arr11[p]
+		} else if arr11[p] > smlst && arr11[p] < secSmlst {
+			secSmlst = arr11[p]
+		}
+	}
+	fmt.Println(smlst, secSmlst)
+
+	// Find the largest odd number
+	arr12 := []int{12, 7, 19, 3, 19, 5}
+	lgst := arr12[0]
+
+	for q := 0; q < len(arr12); q++ {
+		if arr12[q] >= lgst && arr12[q] % 2 == 0 { // largest even
+			lgst = arr12[q]
+		}
+	} 
+	fmt.Println(lgst)
+
+	for q := range arr12 {
+		if arr12[q] >= lgst && arr12[q] % 2 == 1 { // largest odd
+			lgst = arr12[q]
+		}
+	}
+	fmt.Println(lgst)
 
 	// // Find the second largest DISTINCT number
 	// arr := []int{10, 20, 20, 30, 30, 25}
+
+	// Reverse the array in place – Show the slice after reversal.
+	// arr := []int{1, 2, 3, 4, 5} 
 
 }
