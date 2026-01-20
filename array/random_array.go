@@ -197,8 +197,8 @@ func main () {
 	}
 	fmt.Println(lgst)
 
-	// // Find the second largest DISTINCT number
-	// arr := []int{10, 20, 20, 30, 30, 25}
+	// Find the second largest DISTINCT number
+	arr13 := []int{10, 20, 20, 30, 30, 25}
 
 	// Reverse the array in place – Show the slice after reversal.
 	// arr := []int{1, 2, 3, 4, 5} 
