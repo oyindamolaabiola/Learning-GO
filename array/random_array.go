@@ -78,6 +78,19 @@ func main () {
 	}
 	fmt.Println("Non-negative = ", nonNegArr5)
 
+	// Remove all negatives in place with while-style loop
+	arrr := []int{-3, 5, -1, 0, 8, -2, 7} 
+	j := 0
+
+	for j < len(arrr) {
+		if arrr[j] < 0 { 
+			j++
+			continue
+		}
+		fmt.Println(arrr[j])
+		j++
+	} 
+
 	// Check if the array is sorted (ascending) – Return true if sorted, otherwise false.
 	// arr6 := []int{1, 2, 3, 5, 4, 6}
 	arr6 := []int{10, 20, 15, 30}
@@ -198,9 +211,9 @@ func main () {
 	fmt.Println(lgst)
 
 	// Find the second largest DISTINCT number
-	arr13 := []int{10, 20, 20, 30, 30, 25}
+	// arr13 := []int{10, 20, 20, 30, 30, 25}
+	// largsst := arr13[0]
 
-	// Reverse the array in place – Show the slice after reversal.
+	// // Reverse the array in place – Show the slice after reversal.
 	// arr := []int{1, 2, 3, 4, 5} 
-
 }
