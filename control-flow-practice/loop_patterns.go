@@ -239,7 +239,7 @@ func main() {
 	}
 
 	// 1–20 skip multiples of 3 — Use continue inside a classic for.
-	for l := 1; l <=20; l++ {
+	for l := 1; l <= 20; l++ {
 		if l % 3 == 0 {
 			continue
 		}
@@ -352,3 +352,4 @@ func main() {
 		}
 	}
 }
+

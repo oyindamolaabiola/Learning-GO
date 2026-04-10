@@ -152,6 +152,7 @@ func main () {
 	// Check if a Slice Is Non-Decreasing
 	arr9 := []int{2, 4, 4, 7, 9}
 	// assume the data is non-decreasing (the curr > or = prev)
+	// assume true until proven false
 	nonDec := true
 
 	for n := 1; n < len(arr9); n++ {
@@ -209,6 +210,13 @@ func main () {
 		}
 	}
 	fmt.Println(lgst)
+
+	arr13 := []int{8, 3, 5, 1, 9, 2}
+
+	for i := 0; i < len(arr13); i++ {
+    	fmt.Println(arr13[0])
+	}
+
 
 	// Find the second largest DISTINCT number
 	// arr13 := []int{10, 20, 20, 30, 30, 25}
